@@ -34,7 +34,6 @@ app.use(cors());
 app.use(xss());
 app.use(mongoSanitize());
 
-app.use(morgan('tiny'));
 app.use(cookieParser(process.env.JWT_SECRET));
 app.use(json());
 
@@ -47,12 +46,6 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/orders', orderRouter);
-
-app.get('/', (req, res) => {
-    res.send('E-Commerce API');
-});
-
-
 
 // Error Handling Middleware
 app.use(notFoundMiddleware);

@@ -4,7 +4,6 @@ import { connectDB } from "./db/connect.js";
 import errorHandlerMiddleware from "./middleware/error-handler.js";
 import notFoundMiddleware from "./middleware/not-found.js";
 import 'express-async-errors';
-import morgan from "morgan";
 import authRouter from './routes/authRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import productRouter from './routes/productRoutes.js';

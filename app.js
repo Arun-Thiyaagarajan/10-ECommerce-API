@@ -23,7 +23,7 @@ config();
 const app = express();
 
 // Other Middleware
-app.use('trust proxy', 1);
+app.set('trust proxy', 1);
 app.use(rateLimiter({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 60, // limit each IP to 60 requests per windowMs
